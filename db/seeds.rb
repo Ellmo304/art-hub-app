@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+["users"].each do |table_name|
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table_name} RESTART IDENTITY CASCADE")
+end
+
+User.create!([{
+  username: "Ell304",
+  email: "ell_304@msn.com",
+  password: "password",
+  password_confirmation: "password"
+  },{
+    username: "Selina",
+    email: "pussy_cat@msn.com",
+    password: "password",
+    password_confirmation: "password"
+    },{
+      username: "BruceWayne",
+      email: "playboy_billionaire@msn.com",
+      password: "password",
+      password_confirmation: "password"
+      }])
