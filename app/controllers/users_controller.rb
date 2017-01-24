@@ -47,6 +47,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :email, :password_digest)
+      params.permit(:username, :email, :password_digest)
     end
 end

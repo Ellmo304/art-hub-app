@@ -3,6 +3,9 @@ scope :api do
 
   resources :users, except: [:create]
 
+  resources :galleries
+  resources :exhibitions
+
   post 'register', to: 'auth#register'
 
   post 'login', to: 'auth#login'
