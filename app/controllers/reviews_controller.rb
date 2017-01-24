@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   def create
     @review = Review.new(review_params)
-
+    @review.date = Time.now
     @review.user = @current_user
 
     if @review.save
