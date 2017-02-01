@@ -29,8 +29,6 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   def update
 
-    @comment.user = @current_user
-
     if @comment.update(comment_params)
       render json: @comment
     else
