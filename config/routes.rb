@@ -6,6 +6,8 @@ scope :api do
   resources :galleries
   resources :exhibitions
   resources :reviews
+  resources :comments
+
 
   post 'register', to: 'auth#register'
 
